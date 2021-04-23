@@ -92,7 +92,7 @@ sideIcon.forEach(button => {
 			}
 		}
 
-		if (arr.length <= 3){
+		if (arr.length <= 2){
 			switch (symbol) {
 				case "÷":
 					if (!usingOperator){
