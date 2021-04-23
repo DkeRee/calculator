@@ -92,6 +92,14 @@ sideIcon.forEach(button => {
 			}
 		}
 
+		if (symbol == "•"){
+			if (!usingOperator && arr[arr.length - 1].indexOf(".") == -1){
+				arr[arr.length - 1] += ".";
+				nextNum = false;
+				usingOperator = true;
+			}		
+		}
+
 		if (arr.length <= 2){
 			switch (symbol) {
 				case "÷":
@@ -119,17 +127,9 @@ sideIcon.forEach(button => {
 					break;
 				
 				case "+":
-				if (!usingOperator){
+					if (!usingOperator){
 						arr.push("+");
 						nextNum = true;
-						usingOperator = true;
-					}
-					break;
-
-				case "•":
-					if (!usingOperator && arr[arr.length - 1].indexOf(".") == -1){
-						arr[arr.length - 1] += ".";
-						nextNum = false;
 						usingOperator = true;
 					}
 					break;
