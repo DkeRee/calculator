@@ -138,7 +138,7 @@ sideIcon.forEach(button => {
 
 		if (symbol == "="){
 			if (!usingOperator && arr[0] && arr[1] && arr[2]){
-				input.textContent = compute(arr[0], arr[2], arr[1]).toString();
+				input.textContent = compute(parseInt(arr[0]), parseInt(arr[2]), arr[1]).toString();
 				arr = [];
 				nextNum = false;
 				usingOperator = false;
